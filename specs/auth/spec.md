@@ -1,191 +1,114 @@
-# Mentor App — Visão do Produto
+# Auth Spec
 
-## 📌 Visão Geral
+## Objetivo
 
-Mentor App é uma plataforma educacional híbrida que combina:
-
-- ensino online
-- gerenciamento acadêmico
-- mentoria estudantil
-- comunicação em tempo real
-- acompanhamento de desempenho
-
-A plataforma pode ser utilizada tanto por:
-
-- professores independentes
-- escolas
-- cursinhos
-- comunidades de estudo
+Gerenciar autenticação, acesso, sessões e permissões iniciais dos usuários da plataforma.
 
 ---
 
-# 🎯 Objetivo do Produto
+# Funcionalidades
 
-Criar um ambiente moderno de ensino e colaboração onde professores, mentores e alunos possam interagir de forma organizada, acessível e dinâmica.
+O sistema de autenticação deve permitir:
 
-O sistema busca melhorar:
-
-- acompanhamento acadêmico
-- engajamento dos alunos
-- comunicação entre participantes
-- organização de conteúdos
-- suporte estudantil
-
----
-
-# 👥 Tipos de Usuário
-
-## Aluno (Student)
-
-Usuário principal da plataforma.
-
-Pode:
-
-- assistir aulas
-- acessar materiais
-- participar de chats
-- responder questionários
-- enviar atividades
-- acompanhar progresso
+- cadastro de usuários
+- login
+- logout
+- recuperação de senha
+- gerenciamento de sessão
+- definição de tipo de conta
+- controle de acesso
+- persistência de autenticação
 
 ---
 
-## Professor (Teacher)
+# Tipos de Conta
 
-Responsável pela criação e gerenciamento dos conteúdos.
+Durante o cadastro o usuário deve escolher um tipo de conta:
 
-Pode:
+- aluno
+- professor
 
-- criar cursos
-- criar turmas
-- publicar aulas
-- criar atividades
-- moderar chats
-- promover mentores
+O cargo de mentor não pode ser escolhido durante cadastro.
 
----
+Mentores são definidos posteriormente por professores dentro das turmas.
 
-## Mentor
-
-Aluno promovido por um professor para auxiliar outros estudantes.
-
-Pode:
-
-- responder dúvidas
-- ajudar alunos
-- moderar conversas
-- criar resumos
-- auxiliar na organização da turma
+Administradores são definidos apenas pelo sistema.
 
 ---
 
-## Administrador (Admin)
+# Cadastro
 
-Administrador geral da plataforma.
+O sistema deve permitir:
 
-Responsável por:
+- cadastro com nome
+- email
+- senha
+- confirmação de senha
+- escolha de tipo de conta
 
-- gerenciamento global
-- moderação geral
-- relatórios
-- suporte administrativo
-
----
-
-# 🏫 Modos do Sistema
-
-## Modo Curso (Course Mode)
-
-Modelo voltado para cursos livres gratuitos ou pagos.
-
-Funcionalidades:
-
-- catálogo de cursos
-- compra de cursos
-- acompanhamento de progresso
-- certificados
-- avaliações
+O sistema deve validar:
+- email único
+- senha mínima
+- confirmação correta da senha
 
 ---
 
-## Modo Sala de Aula (Classroom Mode)
+# Login
 
-Modelo voltado para instituições de ensino e turmas acadêmicas.
+O sistema deve permitir autenticação utilizando:
 
-Funcionalidades:
+- email
+- senha
 
-- turmas
-- atividades
-- notas
-- calendário
-- comunicação acadêmica
-- mentorias
-
----
-
-# 💬 Sistema de Comunicação
-
-A plataforma possui diferentes canais de comunicação:
-
-- chat geral da turma
-- dúvidas por aula
-- mentoria privada
-- mensagens diretas
+Após login:
+- sessão deve ser criada
+- permissões devem ser carregadas
+- usuário deve ser redirecionado para dashboard
 
 ---
 
-# 📚 Conteúdos Acadêmicos
+# Sessão
 
-Professores e mentores podem disponibilizar:
+O sistema deve manter:
 
-- aulas em vídeo
-- apostilas
-- resumos
-- questionários
-- atividades
-- materiais complementares
+- usuário autenticado
+- permissões carregadas
+- persistência da sessão
 
----
-
-# 🛡️ Sistema de Moderação
-
-O sistema possui recursos de moderação para manter o ambiente organizado e saudável.
-
-Inclui:
-
-- avisos
-- silenciamento temporário
-- suspensão
-- controle de permissões
+A sessão pode ser encerrada por:
+- logout manual
+- expiração
+- suspensão da conta por um administrador
 
 ---
 
-# 🧠 Gamificação
+# Recuperação de Senha
 
-Usuários podem ganhar:
+O sistema deve permitir:
 
-- XP
-- medalhas
-- conquistas
-- posições em ranking
-
-Com base em:
-
-- participação
-- conclusão de atividades
-- ajuda a outros alunos
-- frequência
+- solicitação de recuperação
+- redefinição de senha
+- validação de token de recuperação
 
 ---
 
-# 🚀 Objetivos Técnicos
+# Controle de Acesso
 
-O sistema será desenvolvido seguindo os princípios de:
+O sistema deve restringir funcionalidades com base no cargo do usuário.
 
-- Spec Driven Development (SDD)
-- arquitetura escalável
-- separação por domínio
-- documentação contínua
-- componentização futura
+Tipos de acesso:
+- aluno
+- mentor
+- professor
+- administrador
 
 ---
+
+
+# Persistência de Login
+
+O sistema deve manter login ativo entre sessões até:
+
+- logout manual
+- expiração da sessão
+- revogação de acesso

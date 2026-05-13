@@ -1,6 +1,6 @@
 # Mentor App
 
-## 📌 Sobre o Projeto
+## Sobre o Projeto
 
 Mentor App é uma plataforma educacional híbrida que combina:
 
@@ -19,7 +19,7 @@ A plataforma foi projetada para atender:
 
 ---
 
-# 🎯 Objetivo
+# Objetivo
 
 Criar um ambiente moderno de ensino e colaboração onde professores, mentores e alunos possam interagir de forma organizada, acessível e dinâmica.
 
@@ -33,9 +33,9 @@ O sistema busca melhorar:
 
 ---
 
-# 👥 Tipos de Usuário
+# Tipos de Usuário
 
-## 👨‍🎓 Aluno
+## Aluno
 - assistir aulas
 - responder quizzes
 - participar de chats
@@ -44,7 +44,7 @@ O sistema busca melhorar:
 
 ---
 
-## 👨‍🏫 Professor
+## Professor
 - criar cursos
 - criar turmas
 - publicar aulas
@@ -54,7 +54,7 @@ O sistema busca melhorar:
 
 ---
 
-## 🧠 Mentor
+## Mentor
 - auxiliar alunos
 - responder dúvidas
 - moderar conversas
@@ -62,7 +62,7 @@ O sistema busca melhorar:
 
 ---
 
-## 🛡️ Administrador
+## Administrador
 - gerenciamento global
 - relatórios
 - moderação geral
@@ -70,9 +70,9 @@ O sistema busca melhorar:
 
 ---
 
-# 🏫 Modos do Sistema
+# Modos do Sistema
 
-## 📚 Course Mode
+## Course Mode
 Voltado para cursos livres gratuitos ou pagos.
 
 ### Funcionalidades
@@ -83,7 +83,7 @@ Voltado para cursos livres gratuitos ou pagos.
 
 ---
 
-## 🏫 Classroom Mode
+## Classroom Mode
 Voltado para instituições de ensino e turmas acadêmicas.
 
 ### Funcionalidades
@@ -95,7 +95,7 @@ Voltado para instituições de ensino e turmas acadêmicas.
 
 ---
 
-# 💬 Sistema de Comunicação
+# Sistema de Comunicação
 
 A plataforma possui múltiplos canais de comunicação:
 
@@ -106,7 +106,7 @@ A plataforma possui múltiplos canais de comunicação:
 
 ---
 
-# 📚 Conteúdos Acadêmicos
+# Conteúdos Acadêmicos
 
 Professores e mentores podem disponibilizar:
 
@@ -119,7 +119,7 @@ Professores e mentores podem disponibilizar:
 
 ---
 
-# 🛡️ Sistema de Moderação
+# Sistema de Moderação
 
 Inclui:
 
@@ -130,7 +130,7 @@ Inclui:
 
 ---
 
-# 🧠 Gamificação
+# Gamificação
 
 Usuários podem ganhar:
 
@@ -147,7 +147,7 @@ Com base em:
 
 ---
 
-# 🚀 Arquitetura do Projeto
+# Arquitetura do Projeto
 
 O sistema segue os princípios de:
 
@@ -159,7 +159,7 @@ O sistema segue os princípios de:
 
 ---
 
-# 📂 Estrutura do Projeto
+# Estrutura do Projeto
 
 ```txt
 mentor-app/
@@ -173,7 +173,7 @@ mentor-app/
 
 ---
 
-# 📂 Organização por Domínio
+# Organização por Domínio
 
 ```txt
 specs/
@@ -192,7 +192,7 @@ specs/
 
 ---
 
-# 📄 Estrutura de Specs
+# Estrutura de Specs
 
 Cada domínio possui documentação própria.
 
@@ -210,7 +210,7 @@ auth/
 
 ---
 
-# 📋 Estrutura de Tasks
+# Estrutura de Tasks
 
 As tasks são utilizadas para orientar futuras implementações utilizando IA e desenvolvimento assistido.
 
@@ -226,19 +226,19 @@ tasks/
 
 ---
 
-# 🛠️ Tecnologias Futuras
+# Tecnologias Futuras
 
 Planejamento inicial:
 
 - React
-- TypeScript
 - Vite
 - TailwindCSS
 - React Router
+- JavaScript
 
 ---
 
-# 📈 Roadmap
+# Roadmap
 
 ## Fase 1
 - definição do domínio
@@ -260,7 +260,7 @@ Planejamento inicial:
 
 ---
 
-# 🧩 Visão de Escalabilidade
+# Visão de Escalabilidade
 
 O sistema foi projetado para permitir:
 
@@ -272,6 +272,6 @@ O sistema foi projetado para permitir:
 
 ---
 
-# 📌 Status do Projeto
+# Status do Projeto
 
 🚧 Em fase de especificação e arquitetura inicial.
